@@ -1,0 +1,17 @@
+terraform {
+  backend "local" {
+  }
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.62"
+    }
+  }
+
+  required_version = ">= 1.2.0"
+}
+
+provider "aws" {
+  region = "eu-west-1"
+}
